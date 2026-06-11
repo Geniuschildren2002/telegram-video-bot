@@ -1,0 +1,15 @@
+services:
+  - type: worker
+    name: telegram-video-bot
+    env: docker
+    plan: free
+    dockerCommand: ./start_prod.sh
+    envVars:
+      - key: BOT_TOKEN
+        sync: false # Admin pultidan to'ldiriladi
+      - key: ADMIN_ID
+        sync: false
+      - key: MAX_FILE_SIZE_MB
+        value: "100"
+      - key: RATE_LIMIT
+        value: "5"
