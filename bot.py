@@ -206,7 +206,6 @@ async def url_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
                 video=video_file,
                 caption=(
                     f"{platform_emoji(platform)} <b>{platform}</b> orqali yuklab olindi\n"
-                    f"👤 @{user.username or user.first_name}\n"
                     f"🤖 @{context.bot.username}"
                 ),
                 parse_mode=ParseMode.HTML,
